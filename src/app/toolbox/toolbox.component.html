@@ -1,0 +1,56 @@
+<!-- <span class="toolbox-toggler" cdkDrag [cdkDragStartDelay]="1000"> -->
+<span class="toolbox-toggler" cdkDrag>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="mat-icon-button" #menuTrigger="matMenuTrigger" (mouseclick)="menuTrigger.toggleMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" class="sub-menu">
+        <button mat-menu-item (click)="openDialogWithRef(firstDialog)">
+            <mat-icon class="block-item">home</mat-icon>
+        </button>
+
+        <button mat-menu-item (click)="openDialogWithRef(secondDialog)">
+            <mat-icon class="block-item">people_outline</mat-icon>
+        </button>
+
+        <button mat-menu-item (click)="openDialogWithRef(thirdDialog)">      
+            <mat-icon class="block-item">videocam</mat-icon>
+        </button>
+
+        <button mat-menu-item (click)="openDialogWithRef(fourthDialog)">
+            <mat-icon class="block-item">exit_to_app</mat-icon>
+        </button>
+    </mat-menu>
+</span>
+
+<ng-template #firstDialog>
+    <h2 matDialogTitle>First Dialog!</h2>
+    <p matDialogContent><em>Content for this dialog goes here...</em></p>
+    <mat-dialog-actions align="end">
+        <button mat-button matDialogClose class="btn-close">Dismiss</button>
+    </mat-dialog-actions>
+</ng-template>
+
+<ng-template #secondDialog>
+    <h2 matDialogTitle>Second Dialog!</h2>
+    <p matDialogContent><em>Content for this dialog goes here...</em></p>
+    <mat-dialog-actions align="end">
+        <button mat-button matDialogClose class="btn-close">Dismiss</button>
+    </mat-dialog-actions>
+</ng-template>
+
+<ng-template #thirdDialog>
+    <h2 matDialogTitle>Third Dialog!</h2>
+    <p matDialogContent><em>Content for this dialog goes here...</em></p>
+    <mat-dialog-actions align="end">
+        <button mat-button matDialogClose class="btn-close">Dismiss</button>
+    </mat-dialog-actions>
+</ng-template>
+
+<ng-template #fourthDialog>
+    <h2 matDialogTitle>Fourth Dialog!</h2>
+    <p matDialogContent><em>Content for this dialog goes here...</em></p>
+    <mat-dialog-actions align="end">
+        <button mat-button matDialogClose class="btn-close">Dismiss</button>
+    </mat-dialog-actions>
+</ng-template>
